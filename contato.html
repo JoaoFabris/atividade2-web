@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameStore - Contato</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <meta name="description" content="Entre em contato com a GameStore">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <!-- Cabeçalho -->
     <header>
-      <h1>🎮 GameStore</h1>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="contato.html" class="active">Contato</a>
-      </nav>
+        <h1>🎮 GameStore</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html" class="active" aria-current="page">Contato</a>
+        </nav>
     </header>
 
     <!-- Conteúdo Principal -->
     <main>
-      <section class="contato">
-        <h2>Entre em Contato</h2>
+        <section class="contato">
+            <h2>Entre em Contato</h2>
+            
+            <div class="contato-info">
+                <div class="info-item">
+                    <h3>📧 Email</h3>
+                    <p>joao.fabris@gamestore.com</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>📞 Telefone</h3>
+                    <p>(11) 1234-5678</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>📍 Endereço</h3>
+                    <p>São Paulo - SP</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>🕒 Horário</h3>
+                    <p>Segunda a Sexta: 9h às 18h</p>
+                </div>
+            </div>
 
-        <div class="contato-info">
-          <div class="info-item">
-            <h3>📧 Email</h3>
-            <p>joao.fabris@gamestore.com</p>
-          </div>
-
-          <div class="info-item">
-            <h3>📞 Telefone</h3>
-            <p>(11) 1234-5678</p>
-          </div>
-
-          <div class="info-item">
-            <h3>📍 Endereço</h3>
-            <p>São Paulo - SP</p>
-          </div>
-
-          <div class="info-item">
-            <h3>🕒 Horário</h3>
-            <p>Segunda a Sexta: 9h às 18h</p>
-          </div>
-        </div>
-      </section>
+            <!-- Formulário de Contato -->
+            <form class="formulario-contato" id="form-contato">
+                <h3>Envie sua Mensagem</h3>
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required aria-required="true">
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
-      <p>📧 João Fabris | 📞 (11) 1234-5678</p>
-      <p>
-        &copy; 2024 GameStore João Fabris - Unyleya - Todos os direitos
-        reservados
-      </p>
+        <p>📧 João Fabris | 📞 (11) 1234-5678</p>
+        <p>&copy; 2024 GameStore João Fabris - Unyleya - Todos os direitos reservados</p>
     </footer>
 
     <!-- JavaScript -->
+    <script src="api.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

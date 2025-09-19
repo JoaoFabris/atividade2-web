@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameStore - Início</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <meta name="description" content="GameStore - Os melhores jogos com os melhores preços">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <!-- Cabeçalho -->
     <header>
-      <h1>🎮 GameStore</h1>
-      <nav>
-        <a href="index.html" class="active">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="contato.html">Contato</a>
-      </nav>
+        <h1>🎮 GameStore</h1>
+        <nav>
+            <a href="index.html" class="active" aria-current="page">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
     </header>
 
     <!-- Conteúdo Principal -->
     <main>
-      <section class="hero">
-        <h2>Bem-vindo à GameStore!</h2>
-        <p>Os melhores jogos com os melhores preços</p>
-        <a href="produtos.html" class="btn-ver-jogos">Ver Jogos</a>
-      </section>
+        <section class="hero">
+            <h2>Bem-vindo à GameStore!</h2>
+            <p>Os melhores jogos com os melhores preços</p>
+            <a href="produtos.html" class="btn-ver-jogos" role="button">Ver Jogos</a>
+        </section>
+
+        <!-- Seção de Produtos em Destaque (API) -->
+        <section class="produtos-destaque">
+            <h2>🔥 Produtos em Destaque</h2>
+            <div id="loading-destaque" class="loading" aria-live="polite">
+                <p>Carregando produtos...</p>
+            </div>
+            <div id="produtos-api" class="produtos-grid" role="region" aria-label="Produtos em destaque"></div>
+        </section>
+
+        <!-- Seção de Usuários Online (API) -->
+        <section class="usuarios-online">
+            <h2>👥 Gamers Online Agora</h2>
+            <div id="loading-usuarios" class="loading" aria-live="polite">
+                <p>Carregando usuários online...</p>
+            </div>
+            <div id="usuarios-api" class="usuarios-grid" role="region" aria-label="Usuários online"></div>
+        </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
-      <p>📧 João Fabris | 📞 (11) 1234-5678</p>
-      <p>
-        &copy; 2024 GameStore João Fabris - Unyleya - Todos os direitos
-        reservados
-      </p>
+        <p>📧 João Fabris | 📞 (11) 1234-5678</p>
+        <p>&copy; 2024 GameStore João Fabris - Unyleya - Todos os direitos reservados</p>
     </footer>
 
     <!-- JavaScript -->
+    <script src="api.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

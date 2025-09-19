@@ -1,98 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameStore - Produtos</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <meta name="description" content="Catálogo completo de jogos da GameStore">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <!-- Cabeçalho -->
     <header>
-      <h1>🎮 GameStore</h1>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html" class="active">Produtos</a>
-        <a href="contato.html">Contato</a>
-      </nav>
+        <h1>🎮 GameStore</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="produtos.html" class="active" aria-current="page">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
     </header>
 
     <!-- Conteúdo Principal -->
     <main>
-      <section id="produtos">
-        <h2>Nossos Jogos</h2>
+        <section id="produtos">
+            <h2>Nossos Jogos</h2>
+            
+            <!-- Filtros de Categoria -->
+            <div class="filtros">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="electronics">Eletrônicos</button>
+                <button class="filtro-btn" data-categoria="men's clothing">Roupas Masculinas</button>
+                <button class="filtro-btn" data-categoria="women's clothing">Roupas Femininas</button>
+                <button class="filtro-btn" data-categoria="jewelery">Joias</button>
+            </div>
+            
+            <!-- Loading para produtos da API -->
+            <div id="loading-produtos" class="loading" aria-live="polite">
+                <p>Carregando catálogo completo...</p>
+            </div>
+            
+            <!-- Produtos da API -->
+            <div id="produtos-completos" class="jogos" role="region" aria-label="Catálogo de produtos"></div>
+            
+            <!-- Jogos Locais -->
+            <div class="jogos">
+                <article class="jogo">
+                    <img src="images/produto1.png" alt="FIFA 24 - Jogo de futebol">
+                    <h3>FIFA 24</h3>
+                    <p>O melhor jogo de futebol</p>
+                    <div class="preco">R$ 199,90</div>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
 
-        <div class="jogos">
-          <!-- Jogo 1 -->
-          <article class="jogo">
-            <img src="images/produto1.png" alt="FIFA 24 - Jogo de futebol" />
-            <h3>FIFA 24</h3>
-            <p>O melhor jogo de futebol</p>
-            <div class="preco">R$ 199,90</div>
-            <button>Comprar</button>
-          </article>
+                <article class="jogo">
+                    <img src="images/produto2.png" alt="Call of Duty - Jogo de tiro">
+                    <h3>Call of Duty</h3>
+                    <p>Jogo de tiro e ação</p>
+                    <div class="preco">R$ 249,90</div>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
 
-          <!-- Jogo 2 -->
-          <article class="jogo">
-            <img src="images/produto2.png" alt="Call of Duty - Jogo de tiro" />
-            <h3>Call of Duty</h3>
-            <p>Jogo de tiro e ação</p>
-            <div class="preco">R$ 249,90</div>
-            <button>Comprar</button>
-          </article>
+                <article class="jogo">
+                    <img src="images/produto3.png" alt="Minecraft - Jogo de construção">
+                    <h3>Minecraft</h3>
+                    <p>Construa e explore</p>
+                    <div class="preco">R$ 89,90</div>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
 
-          <!-- Jogo 3 -->
-          <article class="jogo">
-            <img
-              src="images/produto3.png"
-              alt="Minecraft - Jogo de construção"
-            />
-            <h3>Minecraft</h3>
-            <p>Construa e explore</p>
-            <div class="preco">R$ 89,90</div>
-            <button>Comprar</button>
-          </article>
+                <article class="jogo">
+                    <img src="images/produto4.png" alt="GTA V - Jogo de ação">
+                    <h3>GTA V</h3>
+                    <p>Mundo aberto e ação</p>
+                    <div class="preco">R$ 159,90</div>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
 
-          <!-- Jogo 4 -->
-          <article class="jogo">
-            <img src="images/produto4.png" alt="GTA V - Jogo de ação" />
-            <h3>GTA V</h3>
-            <p>Mundo aberto e ação</p>
-            <div class="preco">R$ 159,90</div>
-            <button>Comprar</button>
-          </article>
+                <article class="jogo">
+                    <img src="images/produto5.png" alt="Fortnite - Battle Royale">
+                    <h3>Fortnite</h3>
+                    <p>Battle Royale épico</p>
+                    <div class="preco">Grátis</div>
+                    <button class="btn-comprar">Baixar</button>
+                </article>
 
-          <!-- Jogo 5 -->
-          <article class="jogo">
-            <img src="images/produto5.png" alt="Fortnite - Battle Royale" />
-            <h3>Fortnite</h3>
-            <p>Battle Royale épico</p>
-            <div class="preco">Grátis</div>
-            <button>Baixar</button>
-          </article>
-
-          <!-- Jogo 6 -->
-          <article class="jogo">
-            <img src="images/produto6.png" alt="Cyberpunk 2077" />
-            <h3>Cyberpunk 2077</h3>
-            <p>RPG futurista</p>
-            <div class="preco">R$ 179,90</div>
-            <button>Comprar</button>
-          </article>
-        </div>
-      </section>
+                <article class="jogo">
+                    <img src="images/produto6.png" alt="Cyberpunk 2077">
+                    <h3>Cyberpunk 2077</h3>
+                    <p>RPG futurista</p>
+                    <div class="preco">R$ 179,90</div>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
+            </div>
+        </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
-      <p>📧 João Fabris | 📞 (11) 1234-5678</p>
-      <p>
-        &copy; 2024 GameStore João Fabris - Unyleya - Todos os direitos
-        reservados
-      </p>
+        <p>📧 João Fabris | 📞 (11) 1234-5678</p>
+        <p>&copy; 2024 GameStore João Fabris - Unyleya - Todos os direitos reservados</p>
     </footer>
 
     <!-- JavaScript -->
+    <script src="api.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
